@@ -16,19 +16,26 @@
 
 <body>
 
-   <div id="app">
-      <div class="row mt-5">
-        <div class="col-4 offset-4">
-          <h3 class="text-center">Event</h3>
-          <input type="text" class="form-control">
-          <br>
-          <button class="btn btn-primary btn-sm">Add</button>
-          
+    <div id="app">
+        <div class="row mt-5">
+            <div class="col-4 offset-4">
+                <h3 class="text-center">Event</h3>
+                <input @input="updateValue" type="text" class="form-control" :value="fullName"
+                    placeholder="Enter your name">
+                <br>
+                <input  v-model="fullName" type="text" class="form-control" 
+                    placeholder="Enter your name">
+                 <br>
+                 {{fullName}}
+                <br>
+                <button class="btn btn-primary btn-sm">Add</button>
+                
+
+            </div>
         </div>
-      </div>
-   </div>
+    </div>
     <script src="app.js"></script>
 
 </body>
 
-</html> 
+</html>
