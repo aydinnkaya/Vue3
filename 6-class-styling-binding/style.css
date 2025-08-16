@@ -14,11 +14,11 @@ body {
 .box {
     width: 500px;
     height: 500px;
-    background-color: #fb1717;
+    background-color: #00c8f5;
 }
 
 .border {
-    border: 4px solid #000000;
+    border: 4px dashed #000000;
 }
 
 .red {

@@ -3,12 +3,15 @@ const { createApp } = Vue;
 createApp({
   data() {
     return {
-      currentColor: "red",
+      showBorder: false,
+      redBG: false,
+      boxClass: "border red",
+      bgColor: "cyan",
     };
   },
-  methods: {
-    changeColor(color) {
-      this.currentColor = color;
-    },
+  computed: {
+    boxClasses() {
+      return { border: this.showBorder, red: this.redBG };
+    }
   },
 }).mount("#app");
