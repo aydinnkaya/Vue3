@@ -20,16 +20,17 @@
         <div class="row mt-5">
             <div class="col-4 offset-4">
                 <h3 class="text-center">Event</h3>
+                <!-- Yaklaşım 1: Manuel kontrol (:value + @input) -->
                 <input @input="updateValue" type="text" class="form-control" :value="fullName"
                     placeholder="Enter your name">
                 <br>
-                <input  v-model="fullName" type="text" class="form-control" 
-                    placeholder="Enter your name">
-                 <br>
-                 {{fullName}}
+                <!-- Yaklaşım 2: v-model (kısayol) -->
+                <input v-model="fullName" type="text" class="form-control" placeholder="Enter your name">
+                <br>
+                {{fullName}}
                 <br>
                 <button class="btn btn-primary btn-sm">Add</button>
-                
+
 
             </div>
         </div>

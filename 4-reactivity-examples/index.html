@@ -86,7 +86,7 @@
                   <div v-if="filteredList.length > 0" class="space-y-2">
                     <div
                       v-for="item in filteredList"
-                      :key="item"
+                      :key="item" <! 	•	:key="item" → Vue diff algoritması için benzersiz anahtar. > 
                       class="bg-blue-50 border-l-4 border-blue-400 p-3 rounded-r text-gray-800"
                     >
                       {{ item }}

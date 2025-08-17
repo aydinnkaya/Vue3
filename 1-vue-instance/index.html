@@ -18,7 +18,7 @@
         <br>
         <br>
         <button v-on:click="changeTitle('this button 1 title')">Title change 1</button>
-        <button v-on:click="changeTitle('this button 2 title')">Title change 2</button>
+        <button @click="changeTitle('this button 2 title')">Title change 2</button>
         <br>
         <br>
         <div @mousemove="updateCoords" class="box" @click="changeTitle('box title')">

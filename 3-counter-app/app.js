@@ -84,7 +84,7 @@ const app = Vue.createApp({
     Cevap: computed özellikler, bağımlı oldukları veriler değiştiğinde otomatik olarak ve önbelleğe alınarak yeniden hesaplanır, her zaman bir değer döndürür. Methods ise her çağrıldığında çalışır, önbelleğe alınmaz ve isteğe bağlı olarak değer döndürebilir.
 
     Soru: watch ne zaman kullanılır?
-    Cevap: watch, veri veya hesaplanmış özellik değiştiğinde yan etki (örneğin API çağrısı, loglama) gerçekleştirmek için kullanılır. Değer döndürmez, sadece yan etki yapar.
+    Cevap: watch, data veya computed özellik değiştiğinde yan etki (örneğin API çağrısı, loglama) gerçekleştirmek için kullanılır. Değer döndürmez, sadece yan etki yapar.
 
     Soru: computed ve watch arasındaki temel fark nedir?
     Cevap: computed, türetilmiş bir değer üretir ve template içinde kullanılır; watch ise veri değişimini izler ve yan etki gerçekleştirir.

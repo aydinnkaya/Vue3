@@ -5,8 +5,9 @@ const app = Vue.createApp({
     };
   },
   beforeCreate() {
-    console.log(" beforeCreate calisti")
+    console.log("beforeCreate: data ve methods henüz tanımlanmadı");
   },
+
   created() {
     console.log(" created calisti")
   },
@@ -51,11 +52,9 @@ app.mount("#app");
 // * `data`, `methods`, `computed` gibi özellikler henüz tanımlanmamıştır.
 // * **Kullanım amacı:** İlk ayarlardan önce çalışacak kodlar (örneğin hata ayıklama/loglama).
 
-// ```js
 // beforeCreate() {
 //   console.log("beforeCreate: data ve methods henüz tanımlanmadı");
 // }
-// ```
 
 // ---
 
@@ -65,11 +64,9 @@ app.mount("#app");
 // * DOM henüz oluşturulmadı (yani henüz sayfada bir şey görünmez).
 // * **Kullanım amacı:** API'den veri çekmek, veri işlemek.
 
-// ```js
 // created() {
 //   console.log("created: data tanımlı, DOM hazır değil");
 // }
-// ```
 
 // ---
 
@@ -79,7 +76,6 @@ app.mount("#app");
 // * `el` (DOM elemanı) henüz bağlı değildir.
 // * **Kullanım amacı:** DOM'a bağlanmadan önce son hazırlıklar.
 
-// ```js
 // beforeMount() {
 //   console.log("beforeMount: template hazır, DOM'a yerleştirilmek üzere");
 // }
@@ -92,7 +88,6 @@ app.mount("#app");
 // * Bileşen DOM’a yerleştirildi, kullanıcı artık sayfada görebilir.
 // * **Kullanım amacı:** DOM üzerinde işlem yapmak, üçüncü parti kütüphanelerle çalışmak (örneğin: grafik, harita).
 
-// ```js
 // mounted() {
 //   console.log("mounted: bileşen DOM'a yerleştirildi");
 // }
@@ -105,7 +100,7 @@ app.mount("#app");
 // * Veri (`data`) değiştiğinde ve DOM güncellenmeden hemen önce çalışır.
 // * **Kullanım amacı:** Değişiklik öncesi veri saklamak veya analiz yapmak.
 
-// ```js
+
 // beforeUpdate() {
 //   console.log("beforeUpdate: veri değişti, DOM henüz güncellenmedi");
 // }
@@ -118,7 +113,7 @@ app.mount("#app");
 // * DOM, veri değişikliğine göre yeniden güncellendi.
 // * **Kullanım amacı:** DOM güncellemesi sonrası kontroller yapmak.
 
-// ```js
+
 // updated() {
 //   console.log("updated: DOM güncellendi");
 // }
@@ -131,11 +126,9 @@ app.mount("#app");
 // * Bileşen DOM'dan kaldırılmadan hemen önce çalışır.
 // * **Kullanım amacı:** Temizlik işlemleri, event listener'ları kaldırmak.
 
-// ```js
 // beforeUnmount() {
 //   console.log("beforeUnmount: bileşen kaldırılacak");
 // }
-// ```
 
 // ---
 
@@ -144,22 +137,20 @@ app.mount("#app");
 // * Bileşen DOM'dan tamamen kaldırıldı.
 // * **Kullanım amacı:** Bellek yönetimi, socket bağlantısı kapatma vb.
 
-// ```js
+
 // unmounted() {
 //   console.log("unmounted: bileşen tamamen kaldırıldı");
 // }
-// ```
 
 // ---
 
 // ## 🎯 Özet Görsel: (Metinsel)
 
-// ```
+
 // beforeCreate ➡️ created ➡️ beforeMount ➡️ mounted
 //         🔁 (data değişirse)
 //         beforeUpdate ➡️ updated
 //         🗑️ beforeUnmount ➡️ unmounted
-// ```
 
 // ---
 
